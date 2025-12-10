@@ -74,3 +74,24 @@ int findMaxConsecutiveOnes(int* nums, int numsSize) {
     return m;
 }*/
 
+//Quest 2
+
+//1
+
+//Note: The returned array must be malloced, assume caller calls free().
+
+int* smallerNumbersThanCurrent(int* nums, int numsSize, int* returnSize) {
+    *returnSize=numsSize;
+    int* arr=(int*)malloc((*returnSize)*sizeof(int));
+    for(int i=0;i<numsSize;i++){
+        int comp=nums[i];
+        int c=0;
+        for(int j=0;j<numsSize;j++){
+            if(comp>nums[j] && j!=i){
+                c+=1;
+            }
+        }
+        *(arr+i)=c;
+    }
+    return arr;
+}
