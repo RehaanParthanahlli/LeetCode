@@ -1,3 +1,5 @@
+//1
+
 //As function must returning sequence we must use pointer to point out the address.ie int* concatenate();.
 //We use pointer for returnSize as its declared in main but its value is assigned outside main. ie &returnSize in main as in main we must give address and to access a address we use pointer ie *int in other func.
 // int* returnSize is used as if int returnSize is used then we are changing just address value not the pointer value.
@@ -33,3 +35,22 @@ int main(){
     }
     free(ans);
 }
+
+//2
+
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* shuffle(int* nums, int numsSize, int n, int* returnSize){
+    *returnSize=2*n;
+    int c=0,k=1;
+    int* shuf_arr=(int*)malloc((*returnSize)*sizeof(int));
+    for(int i=0;i<n;i++){
+        shuf_arr[c]=nums[i];
+        shuf_arr[k]=nums[i+n];
+        c+=2;
+        k+=2;
+    }
+    return shuf_arr;
+}
+// Logic Importance!
