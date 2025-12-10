@@ -54,3 +54,23 @@ int* shuffle(int* nums, int numsSize, int n, int* returnSize){
     return shuf_arr;
 }
 // Logic Importance!
+
+//3
+
+int findMaxConsecutiveOnes(int* nums, int numsSize) {
+    int c = 0;   
+    int m = 0;   
+    for (int i = 0; i < numsSize; i++) {
+        if (nums[i] == 1) {
+            c++;
+            if (c > m) {
+                m = c;              // I was creating new sequence which gave some error
+                                    // So, Never create a new DS unless needed.
+            }
+        } else {
+            c = 0;
+        }
+    }
+    return m;
+}
+
