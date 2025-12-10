@@ -1,3 +1,4 @@
+/* Quest -1
 //1
 
 //As function must returning sequence we must use pointer to point out the address.ie int* concatenate();.
@@ -6,10 +7,10 @@
 //int nums not used as nums is just address to access seq we must use pointers.
 
 
-int* getConcatenation(int* nums, int numsSize, int* returnSize) /* If u declare a var in main and wanna change its value in other 
-                                                                function u must give adress while calling function in main and   
-                                                                pointer in other function as u wanna chnage value of that pointer
-                                                                not address */
+int* getConcatenation(int* nums, int numsSize, int* returnSize) // If u declare a var in main and wanna change its value in other 
+                                                                //function u must give adress while calling function in main and   
+                                                                //pointer in other function as u wanna chnage value of that pointer
+                                                                //not address 
 {
     *returnSize= 2*numsSize;
     //*returnSize= 2*numsSize; we use as if we use returnSize=2*numsSize address will be changed.
@@ -38,9 +39,8 @@ int main(){
 
 //2
 
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
+//Note: The returned array must be malloced, assume caller calls free().
+
 int* shuffle(int* nums, int numsSize, int n, int* returnSize){
     *returnSize=2*n;
     int c=0,k=1;
@@ -72,5 +72,5 @@ int findMaxConsecutiveOnes(int* nums, int numsSize) {
         }
     }
     return m;
-}
+}*/
 
