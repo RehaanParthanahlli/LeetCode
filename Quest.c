@@ -95,3 +95,5 @@ int* smallerNumbersThanCurrent(int* nums, int numsSize, int* returnSize) {
     }
     return arr;
 }
+
+//2
